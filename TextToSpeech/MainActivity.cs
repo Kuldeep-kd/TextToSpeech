@@ -100,7 +100,7 @@ namespace TextToSpeech
            };
         }
 
-        private async System.Threading.Tasks.Task PopulateLanguagesAsync()
+        private async void PopulateLanguagesAsync()
         {
             locale = await CrossTextToSpeech.Current.GetInstalledLanguages();
             lis = new List<string>();
