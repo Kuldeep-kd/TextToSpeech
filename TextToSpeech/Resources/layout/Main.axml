@@ -2,13 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    <EditText
-        android:inputType="textMultiLine"
+    android:orientation="vertical"
+    android:background="#000000">
+    <RelativeLayout
+        android:gravity="top"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:id="@+id/textBox"
-        android:text="Enter the text here!" />
+        android:layout_height="350dp">
+        <ImageView
+            android:src="@drawable/image"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:drawingCacheQuality="high"
+            android:scaleType="fitXY" />
+        <EditText
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:id="@+id/textBox"
+            android:background="#73000000"
+            android:textAlignment="center"
+            android:text="Enter the text here!" />
+    </RelativeLayout>
     <Space
         android:layout_width="match_parent"
         android:layout_height="5dp" />
@@ -19,6 +33,7 @@
         android:gravity="bottom">
         <TextView
             android:text="Speed"
+            android:textColor="@android:color/white"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,9 +41,11 @@
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
             android:id="@+id/seekerSpeed" />
         <TextView
             android:text="Pitch"
+            android:textColor="@android:color/white"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,6 +56,7 @@
             android:id="@+id/seekerPitch" />
         <TextView
             android:text="Volume"
+            android:textColor="@android:color/white"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
