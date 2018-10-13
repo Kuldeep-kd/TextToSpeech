@@ -49,7 +49,7 @@ namespace TextToSpeech
             volumetext = FindViewById<TextView>(Resource.Id.textVolume);
             languageSpinner = FindViewById<Spinner>(Resource.Id.langspinner);
             crosslocale = new CrossLocale?();
-
+            
 
 
             #endregion

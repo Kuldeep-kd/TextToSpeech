@@ -3,23 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000000">
+    android:background="#F5F5F5">
     <RelativeLayout
         android:gravity="top"
         android:layout_width="match_parent"
-        android:layout_height="350dp">
-        <ImageView
-            android:src="@drawable/image"
-            android:layout_height="fill_parent"
-            android:layout_width="fill_parent"
-            android:drawingCacheQuality="high"
-            android:scaleType="fitXY" />
+        android:layout_height="350dp"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:clipToPadding="false"
+        android:elevation="16dp"
+        android:layout_margin="10dp">
         <EditText
             android:inputType="textMultiLine"
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:id="@+id/textBox"
-            android:background="#73000000"
+            android:background="#03A9F4"
+            android:textColor="@android:color/white"
             android:textAlignment="center"
             android:text="Enter the text here!" />
     </RelativeLayout>
@@ -30,10 +30,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:padding="5dp"
         android:gravity="bottom">
         <TextView
             android:text="Speed"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,11 +43,11 @@
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/background_dark"
+            android:progressBackgroundTint="@android:color/black"
             android:id="@+id/seekerSpeed" />
         <TextView
             android:text="Pitch"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,10 +55,11 @@
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:progressBackgroundTint="@android:color/black"
             android:id="@+id/seekerPitch" />
         <TextView
             android:text="Volume"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,6 +67,7 @@
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:progressBackgroundTint="@android:color/black"
             android:id="@+id/seekerVolume" />
     </LinearLayout>
     <LinearLayout
