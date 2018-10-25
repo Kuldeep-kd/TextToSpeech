@@ -3,37 +3,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000000">
-    <RelativeLayout
+    android:weightSum="1"
+    android:background="#F5F5F5">
+<!--This is the EditText Layout-->
+    <LinearLayout
+        android:layout_weight="0.4"
         android:gravity="top"
-        android:layout_width="match_parent"
-        android:layout_height="350dp">
-        <ImageView
-            android:src="@drawable/image"
-            android:layout_height="fill_parent"
-            android:layout_width="fill_parent"
-            android:drawingCacheQuality="high"
-            android:scaleType="fitXY" />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:background="#F5F5F5"
+        android:elevation="10dp">
         <EditText
             android:inputType="textMultiLine"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:id="@+id/textBox"
-            android:background="#73000000"
-            android:textAlignment="center"
-            android:text="Enter the text here!" />
-    </RelativeLayout>
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="5dp" />
+            android:background="#03A9F4"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:text="Enter the text here!"
+            android:elevation="5dp" />
+    </LinearLayout>
+<!--End EditText Layout-->
+<!--This is the Seek Bar Layout-->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:gravity="bottom">
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:gravity="top"
+        android:elevation="5dp">
         <TextView
             android:text="Speed"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,11 +47,11 @@
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/background_dark"
+            android:progressBackgroundTint="@android:color/black"
             android:id="@+id/seekerSpeed" />
         <TextView
             android:text="Pitch"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,10 +59,11 @@
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:progressBackgroundTint="@android:color/black"
             android:id="@+id/seekerPitch" />
         <TextView
             android:text="Volume"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,28 +71,22 @@
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:progressBackgroundTint="@android:color/black"
             android:id="@+id/seekerVolume" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="bottom">
         <Spinner
             android:contentDescription="Select any Language of the following"
             android:layout_width="wrap_content"
+            android:padding="5dp"
+            android:soundEffectsEnabled="true"
+            android:spinnerMode="dialog"
+            android:popupBackground="#03A9F4"
             android:layout_height="wrap_content"
             android:id="@+id/langspinner" />
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="bottom">
-            <Button
-                android:id="@+id/btnPlay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Play" />
-        </LinearLayout>
+            android:text="Play" />
     </LinearLayout>
+<!--End Seek Bar Layout-->
 </LinearLayout>
